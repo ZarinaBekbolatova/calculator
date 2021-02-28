@@ -1,0 +1,39 @@
+<div class="calculator">
+  <div class="output-row">
+    <input class="output"
+           [(ngModel)]="output"
+           (keydown)="onKeydown($event)">
+  </div>
+  <div class="buttons-container">
+    <div class="row">
+      <button (click)="allClear()">CE</button>
+      <button (click)="allClear()">C</button>
+      <button (click)="clear()"><</button>
+      <button (click)="pressOperator('/')">&#247;</button>
+    </div>
+    <div class="row">
+      <button class="number" (click)="pressNum(7)">7</button>
+      <button class="number" (click)="pressNum(8)">8</button>
+      <button class="number" (click)="pressNum(9)">9</button>
+      <button (click)="pressOperator('*')">&#215;</button>
+    </div>
+    <div class="row">
+      <button class="number" (click)="pressNum(4)">4</button>
+      <button class="number" (click)="pressNum(5)">5</button>
+      <button class="number" (click)="pressNum(6)">6</button>
+      <button (click)="pressOperator('-')">&#8722;</button>
+    </div>
+    <div class="row">
+      <button class="number" (click)="pressNum(1)">1</button>
+      <button class="number" (click)="pressNum(2)">2</button>
+      <button class="number" (click)="pressNum(3)">3</button>
+      <button (click)="pressOperator('+')">&#43;</button>
+    </div>
+    <div class="row">
+      <button (click)="pressOperator('-')">&#177;</button>
+      <button class="number" (click)="pressNum(0)">0</button>
+      <button class="number" (click)="pressOperator('.')">.</button>
+      <button (click)="getAnswer()">&#61;</button>
+    </div>
+  </div>
+</div>
